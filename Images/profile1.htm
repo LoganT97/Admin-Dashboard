@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+   <meta charset="utf-8">
+	<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48" href="assets/images/favicon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>Random Users - Generate random user profile pictures and names</title>
+   <meta name="description" content="generate random user profile pictures and names for your web projects, prototypes, designs and mockups.">
+   <meta name="keywords" content="random, users, developer resources, illustrations, photos, stock images, design inspiration, prototype, web development, app development, design">
+   <!-- Twitter Card -->   
+   <meta property="og:title" content="Random Users">
+   <meta property="og:description" content="Generate random user profile pictures and names as placeholders for mockups, web design and prototypes">
+   <meta property="og:image" content="https://xsgames.co/randomusers/assets/twitter-header.png">
+   <meta property="og:url" content="https://xsgames.co/randomusers">
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:creator" content="@xsgames_">
+
+   <!-- styles ands scripts -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/ba96b2b1ef.js" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9/dist/sweetalert2.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9/dist/sweetalert2.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <link rel="stylesheet" href="assets/style.css">
+   <script src="assets/js/names.js"></script>
+
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S9KXD1RPF7"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'G-S9KXD1RPF7');
+   </script>
+
+   <!-- bmac widget -->
+   <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="frankeno" data-description="Support me on Buy me a coffee!" data-message="Thanks for visiting! If you enjoy this tool, support me with a beer, I'll really appreciate that. Cheers! 🍻" data-color="#FF813F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+
+   <!-- Force HTTPS -->
+   <script>if (document.URL.substring(0,5) == "http:") window.location.replace('https:' + document.URL.substring(5));</script>   
+   </head>
+   <body>
+   <div class="container">
+      <a class="htu-btn" href="javascript:void(0)" onclick="showHTUAlert()">&nbsp;<i class="fas fa-question-circle"></i>&nbsp; </a>
+
+      <div class="header text-center">
+         <img class="header-img" src="assets/images/favicon.png"><br>
+         <h1>Random users</h1>
+         <h4>Generate random user profile pictures and names to use <br>them as placeholders for your prototypes and design projects</h4>
+         <br>
+         <!-- ProductHunt -->
+         <a href="https://www.producthunt.com/posts/random-users?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-random&#0045;users" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=338073&theme=light&period=daily" alt="Random&#0032;Users - Generate&#0032;random&#0032;user&#0032;profile&#0032;pictures&#0032;and&#0032;names&#0032;with&#0032;a&#0032;click | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+         <br><br>
+         
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1252212667796048"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1252212667796048"
+     data-ad-slot="9574082627"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br><br>
+
+
+         <p class="section-title">Generate:</p>
+         <a class="generate-btn" href="javascript:void(0)" onclick="generateMales()"><i class="fas fa-male"></i> Male</a> &nbsp;&nbsp;
+         <a class="generate-btn" href="javascript:void(0)" onclick="generateFemales()"><i class="fas fa-female"></i> Female</a>
+         <br><br><br>
+
+         <p class="section-title">Preview shape:</p>
+         <a class="option-btn" href="javascript:void(0)" onclick="makeCircle()"><i class="far fa-circle"></i></a>&nbsp;&nbsp;
+         <a class="option-btn" href="javascript:void(0)" onclick="makeSquare()"><i class="far fa-square"></i></a>&nbsp;&nbsp;
+         <br><br>
+
+         <p class="section-title">Filters:</p>
+         <a class="option-btn" href="javascript:void(0)" onclick="filterImage('bw')"><i class="fas fa-meh-blank"></i></a>&nbsp;&nbsp;
+         <a class="option-btn" href="javascript:void(0)" onclick="filterImage('sepia')"><i class="fas fa-fish"></i></a>&nbsp;&nbsp;
+         <a class="option-btn" href="javascript:void(0)" onclick="filterImageOriginal()"><i class="fas fa-palette"></i></a>&nbsp;&nbsp;
+         
+         <!-- Users list -->
+         <div id="users-list" class="row">
+            <div class="col-lg-2"><img class="avatar-img" id="avatar0" src=""><p class="name-txt" id="name0" onclick="copyName(0)"></p></div>
+            <div class="col-lg-2"><img class="avatar-img" id="avatar1" src=""><p class="name-txt" id="name1" onclick="copyName(1)"></p></div>
+            <div class="col-lg-2"><img class="avatar-img" id="avatar2" src=""><p class="name-txt" id="name2" onclick="copyName(2)"></p></div>
+            <div class="col-lg-2"><img class="avatar-img" id="avatar3" src=""><p class="name-txt" id="name3" onclick="copyName(3)"></p></div>
+            <div class="col-lg-2"><img class="avatar-img" id="avatar4" src=""><p class="name-txt" id="name4" onclick="copyName(4)"></p></div>
+            <div class="col-lg-2"><img class="avatar-img" id="avatar5" src=""><p class="name-txt" id="name5" onclick="copyName(5)"></p></div>
+            <div class="col-lg-2"><img class="avatar-img" id="avatar6" src=""><p class="name-txt" id="name6" onclick="copyName(6)"></p></div>
+            <div class="col-lg-2"><img class="avatar-img" id="avatar7" src=""><p class="name-txt" id="name7" onclick="copyName(7)"></p></div>
+            <div class="col-lg-2"><img class="avatar-img" id="avatar8" src=""><p class="name-txt" id="name8" onclick="copyName(8)"></p></div>
+            <div class="col-lg-2"><img class="avatar-img" id="avatar9" src=""><p class="name-txt" id="name9" onclick="copyName(9)"></p></div>
+            <div class="col-lg-2"><img class="avatar-img" id="avatar10" src=""><p class="name-txt" id="name10" onclick="copyName(10)"></p></div>
+            <div class="col-lg-2"><img class="avatar-img" id="avatar11" src=""><p class="name-txt" id="name11" onclick="copyName(11)"></p></div>
+         </div><!-- ./ users-list -->
+
+
+         <!-- Pixel Avatars -->
+         <br><br><br><br>
+         <h2>Pixel Avatars</h2><br>
+         <a class="generate-btn" href="javascript:void(0)" onclick="generatePixelArt()"><i class="far fa-grin-stars"></i> Generate</a>
+         <br><br>
+
+         <p class="section-title">Preview shape:</p>
+         <a class="option-btn" href="javascript:void(0)" onclick="makeCircle()"><i class="far fa-circle"></i></a>&nbsp;&nbsp;
+         <a class="option-btn" href="javascript:void(0)" onclick="makeSquare()"><i class="far fa-square"></i></a>&nbsp;&nbsp;
+         <br><br>
+         
+         <div id="users-list" class="row">
+            <div class="col-lg-2"><img class="avatar-img" id="pavatar0" src=""></div>
+            <div class="col-lg-2"><img class="avatar-img" id="pavatar1" src=""></div>
+            <div class="col-lg-2"><img class="avatar-img" id="pavatar2" src=""></div>
+            <div class="col-lg-2"><img class="avatar-img" id="pavatar3" src=""></div>
+            <div class="col-lg-2"><img class="avatar-img" id="pavatar4" src=""></div>
+            <div class="col-lg-2"><img class="avatar-img" id="pavatar5" src=""></div>
+         </div>
+
+         <!-- API -->
+         <br><br><br><br>
+         <h2>API</h2><br>
+         <p>Copy the links below and paste them into the <code>src</code> tag of your web image<br> 
+            Example:
+            <p class="code-p">&#60;img src="<strong style="color: #3f51b5;">https://xsgames.co/randomusers/avatar.php?g=male</strong>"></p>
+         </p>
+         <br><br>
+
+         <p class="section-title">Get a male picture</p>
+         <img class="avatar-img" src="https://xsgames.co/randomusers/avatar.php?g=male"><br><br>
+         <p class="code-p" id="maleCode"> https://xsgames.co/randomusers/avatar.php?g=male 
+            <span class="copy-btn"><a  href="javascript:void(0)" onclick="copyCode('https://xsgames.co/randomusers/avatar.php?g=male')"><i class="far fa-clone"></i></a></span>
+         </p>
+
+         <br><br>
+
+         <p class="section-title">Get a female picture</p>
+         <img class="avatar-img" src="https://xsgames.co/randomusers/avatar.php?g=female"><br><br>
+         <p class="code-p" id="femaleCode"> https://xsgames.co/randomusers/avatar.php?g=female 
+            <span class="copy-btn"><a  href="javascript:void(0)" onclick="copyCode('https://xsgames.co/randomusers/avatar.php?g=female')"><i class="far fa-clone"></i></a></span>
+         </p>
+
+         <br><br>
+
+         <p class="section-title">Get a pixelart picture</p>
+         <img class="avatar-img" src="https://xsgames.co/randomusers/avatar.php?g=pixel"><br><br>
+         <p class="code-p" id="pixelCode"> https://xsgames.co/randomusers/avatar.php?g=pixel 
+            <span class="copy-btn"><a  href="javascript:void(0)" onclick="copyCode('https://xsgames.co/randomusers/avatar.php?g=pixel')"><i class="far fa-clone"></i></a></span>
+         </p>
+
+      </div><!-- ./ text-center -->
+
+      <footer>
+         A project by <strong><a href="https://xsgames.co/frankeno" target="_blank">Frank Eno 👾 XSGames</a></strong>
+      </footer>      
+   </div><!-- ./ container -->
+
+<script>
+   /* global var */
+   var randIntsArr = [];
+   var isMales = false; 
+   generateMales();
+   generatePixelArt();
+
+   function generateMales() {
+      randIntsArr = [];
+      isMales = true;
+
+      for(var i=0;i<12;i++){
+         var randInt = getRandomInt(0, 78);
+         randIntsArr.push(randInt);
+         $('#avatar'+i).attr('src', 'assets/avatars/male/'+randInt+'.jpg');
+      }
+      for(var i=0;i<12;i++){
+         var randIntName = getRandomInt(0, maleNames.length);
+         var randIntLastName = getRandomInt(0, lastNames.length);
+         var name = maleNames[randIntName].charAt(0).toUpperCase() + maleNames[randIntName].slice(1);
+         var lastname = lastNames[randIntLastName].charAt(0).toUpperCase() + lastNames[randIntLastName].slice(1);
+         $('#name'+i).text(name + ' ' + lastname);
+      }
+   }
+
+   function generateFemales() {
+      randIntsArr = [];
+      isMales = false;
+
+      for(var i=0;i<12;i++){
+         var randInt = getRandomInt(0, 78);
+         randIntsArr.push(randInt);
+         $('#avatar'+i).attr('src', 'assets/avatars/female/'+randInt+'.jpg');
+      }
+      for(var i=0;i<12;i++){
+         var randIntName = getRandomInt(0, femaleNames.length);
+         var randIntLastName = getRandomInt(0, lastNames.length);
+         var name = femaleNames[randIntName].charAt(0).toUpperCase() + femaleNames[randIntName].slice(1);
+         var lastname = lastNames[randIntLastName].charAt(0).toUpperCase() + lastNames[randIntLastName].slice(1);
+         $('#name'+i).text(name + ' ' + lastname);
+      }
+   }
+
+   function generatePixelArt() {      
+      for(var i=0;i<6;i++){
+         var randInt = getRandomInt(0, 53);
+         randIntsArr.push(randInt);
+         $('#pavatar'+i).attr('src', 'assets/avatars/pixel/'+randInt+'.jpg');
+      }
+   }
+
+   function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+   }
+
+   function makeCircle() { for(var i=0;i<12;i++){ $('.avatar-img').css('border-radius', '99px'); } }
+   function makeSquare() { for(var i=0;i<12;i++){ $('.avatar-img').css('border-radius', '12px'); } }
+  
+
+   // Image Filter
+   function filterImage(fltr){
+      for(var i=0;i<12;i++){
+         var image=document.getElementById('avatar'+i);
+         var canvas= document.createElement("canvas");
+         var ctx = canvas.getContext('2d');
+         canvas.width=256;
+         canvas.height=256;
+
+         if(fltr == 'bw'){ ctx.filter = "grayscale(100%)";
+         } else { ctx.filter = "sepia(80%)"; }
+             
+         ctx.drawImage(image, 0, 0);
+         var canvas_image=canvas.toDataURL();
+         document.getElementById('avatar'+i).src=canvas_image;
+         var elems=document.getElementsByClassName("frame"+i);
+         Array.from(elems).forEach(function(elem){ elem.className="frame"+i; });
+      }
+   }
+   
+   function filterImageOriginal(){
+      var avatarFolder = ''; 
+      if(isMales){ avatarFolder = 'male'; } else { avatarFolder = 'female'; }
+      for(var i=0;i<randIntsArr.length;i++){ $('#avatar'+i).attr('src', 'assets/avatars/'+avatarFolder+'/'+randIntsArr[i]+'.jpg'); }
+   }
+
+   function copyName(index) {
+      var nameToCopy = $('#name'+index).text();
+      
+      $('body').append('<textarea id="ta"></texarea>');    
+      $("#ta").val(nameToCopy);
+      $("#ta").select();
+      document.execCommand('copy');
+      $("#ta").remove();
+      
+      Swal.fire({ position: 'center', icon: 'success', title: '', text: 'Name copied to your Clipboard!', showConfirmButton: false, timer: 1500 });
+   }
+
+   function copyCode(codeToCopy) {   
+      $('body').append('<textarea id="ta"></texarea>');    
+      $("#ta").val(codeToCopy);
+      $("#ta").select();
+      document.execCommand('copy');
+      $("#ta").remove();
+      
+      Swal.fire({ position: 'center', icon: 'success', title: '', text: 'Code copied to your Clipboard!', showConfirmButton: false, timer: 1500 });
+   }
+
+   // Alert
+   function showHTUAlert() {
+      Swal.fire({
+         html: "<h4>Download images:</h4>• Desktop: Right-click on an image -> Save Image As..<br>• Mobile: Long-tap -> Save Image<br><br><h4>Copy names:</h4>• Click on a name to copy it in your clipboard, paste it anywhere<br><br>You can apply filters to the images and download them in black&white and sepia tone (Desktop only).<br><br>Circle shapes are only visible as a preview, you will always download a square image with no rounded corners" 
+      });
+   }
+
+</script>
+</body>
+</html>
